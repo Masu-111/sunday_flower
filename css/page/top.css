@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+/*
+SP 〜519px
+tab 520px 〜 959px
+PC 960px 〜 
+*/
+
+/*
+z-index
+9999 ロゴフェードインp
+999 ロゴフェードイン
+100 ハンバーガーメニューボタン　header .hum_menu
+50  ヘッダーナビリスト header .nav_list
+-50 キービジュアル　.key_vey_v_slider_sp
+*/
+
+/*=====================
+ロゴ　フェードイン
+=====================*/
+.logo_fadein {
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo_fadein p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    width: 280px;
+    transform: translateY(2);
+}
+
+
+/*=====================
+トップ　キービジュアル
+=====================*/
+
+.key_bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    /* background: linear-gradient(90deg, rgb(253, 168, 38), rgb(253, 221, 83)); */
+}
+
+.key_v {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -50;
+}
+
+.key_v_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+}
+
+.key_v_text {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    font-size: 21px;
+    font-weight: 100;
+}
+
+@media screen and (min-width:520px) {
+    .key_v_text {
+        font-size: 32px;
+    }
+}
+
+/*===min-width:520px===*/
+
+
+@media screen and (min-width:960px) {
+
+    .key_v_text {
+        position: absolute;
+        right: 30px;
+        bottom: 120px;
+        font-size: 48px;
+        font-weight: 100;
+        top: 50%;
+        right: 5%;
+    }
+}
+
+/*===min-width:960px===*/
+
+/*=====================
+main
+=====================*/
+main {
+    margin-top: calc(100vh - 144px);
+}
+
+/*===min-width:960px===*/
+
+.main_inner {
+    overflow: hidden;
+}
+
+@media screen and (min-width:960px) {
+    main {
+        margin-top: calc(100vh - 230px);
+    }
+}
+
+/*===min-width:960px===*/
+
+/*=====================
+about
+=====================*/
+.top_about {
+    max-width: 550px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.top_about_text p {
+    font-family: sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.top_about_text {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width:960px) {
+    .top_about {
+        max-width: 900px;
+        margin-top: 160px;
+        margin-bottom: 80px;
+    }
+}
+
+/*=====================
+インナー画像
+=====================*/
+.inner_img_sp_cover {
+    width: 100%;
+    max-height: 400px;
+}
+
+.inner_img_pc_cover,
+.inner_img_pc_cover img {
+    display: none;
+}
+
+.inner_img_sp_cover {
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width:520px) {
+
+    .inner_img_sp_cover,
+    .inner_img_sp_cover img {
+        display: none;
+    }
+
+    .inner_img_pc_cover,
+    .inner_img_pc_cover img {
+        display: block;
+        width: 100%;
+        max-height: 400px;
+    }
+}
+
+/*===min-width:520px===*/
+
+@media screen and (min-width:960px) {
+    .inner_img_pc_cover {
+        margin-bottom: 80px;
+    }
+
+    .under {
+        margin-bottom: 80px;
+    }
+}
+
+/*===min-width:960px===*/
+
+.under {
+    margin-bottom: 80px;
+}
+
+/*=====================
+Flower
+=====================*/
+.top_flower {
+    max-width: 550px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.top_flower_text {
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+
+.flower_wrap_sp::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: calc(350px - 100px);
+    background-color: #fda826;
+    z-index: -1;
+    bottom: 165px;
+    left: 0;
+    right: -16px;
+}
+
+@media screen and (min-width:960px) {
+    .main_inner {
+        overflow: hidden;
+    }
+
+    .top_flower {
+        max-width: 1480px;
+        margin-bottom: 80px;
+    }
+
+    .flower_wrap_pc {
+        position: relative;
+    }
+
+    .flower_wrap_pc::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: calc(100vw - 16px);
+        height: calc(350px - 70px);
+        background-color: #fda826;
+        z-index: -1;
+        bottom: 60px;
+        left: 0;
+        right: -16px;
+    }
+}
+
+/*===min-width:960px===*/
+
+/*=====================
+News
+=====================*/
+.top_news {
+    max-width: 690px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.news_dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: 5px;
+}
+
+.pink {
+    background-color: #f29c9f;
+}
+
+.blue {
+    background-color: #88abda;
+}
+
+.news_box {
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+.news_title_wrap {
+    display: flex;
+    max-width: 300px;
+}
+
+.news_title h5 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: start;
+}
+
+.news_title time {
+    font-size: 14px;
+    display: block;
+    text-align: end;
+    margin-bottom: 4px;
+    width: 205px;
+}
+
+.news_text {
+    font-size: 14px;
+    text-align: start;
+    max-width: 550px;
+    margin-left: 30px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    /* ここから */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* ここまでが省略表示のためのCSS */
+}
+
+.news-line::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #282728;
+    margin-bottom: 2px;
+}
+
+.news-line::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #282728;
+    margin-bottom: 8px;
+}
+
+
+@media screen and (min-width:960px) {
+    .top_news {
+        max-width: 900px;
+        margin-bottom: 160px;
+    }
+
+    .news_box a {
+        display: flex;
+        padding-top: 8px;
+        transition-duration: 0.6s;
+        transition-property: opacity;
+    }
+
+    .news_box a:hover {
+        opacity: 0.6;
+    }
+
+    .news_text {
+        margin-bottom: 16px;
+    }
+}
+
+/*=====================
+tab-wrap
+=====================*/
+.tab-list {
+    display: flex;
+    justify-content: start;
+    gap: 8px;
+}
+
+.tab-item {
+    width: 23%;
+    padding: 10px 0;
+    border-radius: 6px 6px 0 0;
+    color: #999;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    transition-property: color background-color;
+    transition-timing-function: ease-in-out;
+    font-family: sans-serif;
+}
+
+.tab-item:first-child {
+    background-color: rgba(253, 168, 38, 0.15);
+}
+
+.tab-item:nth-child(2) {
+    background-color: rgba(136, 171, 218, 0.15);
+}
+
+.tab-item:last-child {
+    background-color: rgba(242, 156, 159, 0.15);
+}
+
+/* タブをクリックした時 ホバーした時 */
+.tab-item:hover,
+.tab-item.is-active {
+    color: #282728;
+}
+
+.tab-item:first-child:hover,
+.tab-item:first-child.is-active {
+    background-color: #fda826;
+}
+
+.tab-item:nth-child(2):hover,
+.tab-item:nth-child(2).is-active {
+    background-color: #88abda;
+}
+
+.tab-item:last-child:hover,
+.tab-item:last-child.is-active {
+    background-color: #f29c9f;
+}
+
+/* パネル */
+.panel-list {
+    background-color: #fff;
+    border: 1px solid #282728;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.panel-list::-webkit-scrollbar {
+    /* スクロールバーの高さ */
+    width: 8px;
+    height: 2px;
+}
+
+.panel-list::-webkit-scrollbar-thumb {
+    /* ツマミの色 */
+    background: #d2b48c;
+    /* ツマミ両端の丸み */
+    border-radius: 7px;
+}
+
+.panel-list::-webkit-scrollbar-track {
+    /* トラックの色 */
+    background: #f5deb3;
+    /* トラック両端の丸み */
+    border-radius: 7px;
+}
+
+.panel-item {
+    display: none;
+    width: 100%;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.panel-item.is-active {
+    display: block;
+    animation: panel-show 0.9s ease-in-out forwards;
+}
+
+/* パネル切り替えのアニメーション */
+@keyframes panel-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .tab-item {
+        width: 20%;
+    }
+}
+
+/*===min-width:960px===*/

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/*
+SP 〜519px
+tab 520px 〜 959px
+PC 960px 〜 
+*/
+
+/*
+z-index
+9999 ロゴフェードインp
+999 ロゴフェードイン
+100 ハンバーガーメニューボタン　header .hum_menu
+50  ヘッダーナビリスト header .nav_list
+-50 キービジュアル　.key_v
+*/
+
+/*=====================
+お問い合わせフォーム
+=====================*/
+.contact_img {
+    background-image: url(../../img/contact_key.jpg);
+}
+
+.contact_form_text {
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+.contact_form {
+    font-family: sans-serif;
+}
+
+.form_item {
+    margin-bottom: 20px;
+}
+
+.form_item:not(:last-of-type)::after {
+    content: '';
+    display: block;
+    background-color: #fda826;
+    width: 100%;
+    height: 1px;
+}
+
+.form_item:last-of-type {
+    margin-bottom: 40px;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #282728;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+dt {
+    text-align: start;
+    margin-bottom: 8px;
+}
+
+dd {
+    margin-bottom: 2px;
+}
+
+.pref_choice {
+    margin-bottom: 8px;
+}
+
+.zipcode_cover {
+    text-align: start;
+}
+
+.p-postal-code {
+    display: inline-block;
+    width: 100px;
+    margin-left: 8px;
+}
+
+select {
+    border: 1px solid #282728;
+    border-radius: 2px;
+    width: 100%;
+    padding: 4px;
+}
+
+textarea {
+    border: 1px solid #282728;
+    width: 100%;
+}
+
+.submit_btn{
+    width: 200px;
+    line-height: 80px;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+    transition-property: border background-color opacity;
+}
+
+.thanks_btn {
+    display: block;
+    border: 1px solid #282728;
+    width: 200px;
+    line-height: 80px;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+    transition-property: border background-color opacity color;
+    margin: 0 auto;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.start {
+    text-align: start;
+    margin-bottom: 40px;
+}
+
+.start .form_item {
+    margin-bottom: 20px;
+}
+
+.hissu {
+    color: red;
+    border: 1px solid red;
+    font-family: sans-serif;
+    padding: 3px;
+    margin-left: 8px;
+}
+
+.back {
+    display: block;
+    border: 1px solid #282728;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    transition-duration: 0.3s;
+    transition-property: border background-color opacity color;
+    margin: 0 auto;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.alert {
+    color: tomato;
+}
+
+@media screen and (min-width:960px) {
+    .submit_btn:hover {
+        background-color: #fda826;
+        border: 1px solid #fda826;
+        opacity: 0.9;
+    }
+
+    .thanks_btn:hover {
+        background-color: #fda826;
+        border: 1px solid #fda826;
+        opacity: 0.9;
+        color: #fff;
+    }
+
+    .back:hover {
+        background-color: #282728;
+        border: 1px solid #282728;
+        opacity: 0.9;
+        color: #fff;
+    }
+
+    input[type="submit"]:hover {
+        color: #fff;
+    }
+}
+
+/*=====================
+thanks
+=====================*/
+
+.thanks_title{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.thanks_text {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.onegai {
+    font-size: 12px;
+}
+
+@media screen and (min-width:960px) {
+    .thanks_text {
+        font-size: 16px;
+    }
+
+    .onegai {
+        font-size: 14px;
+    }
+    
+}
+/*===min-width:960px===*/
+

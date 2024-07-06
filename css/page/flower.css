@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/*
+SP 〜519px
+tab 520px 〜 959px
+PC 960px 〜 
+*/
+
+/*
+z-index
+9999 ロゴフェードインp
+999 ロゴフェードイン
+100 ハンバーガーメニューボタン　header .hum_menu
+50  ヘッダーナビリスト header .nav_list
+-50 キービジュアル　.key_v
+*/
+
+/*=====================
+Flower
+=====================*/
+
+.flower_img {
+    background-image: url(../../img/flower_key.jpg);
+}
+
+.flower_sp,
+.flower_pc {
+    font-family: sans-serif;
+}
+
+.flower_box_sp {
+    margin-bottom: 16px;
+}
+
+.figure_box_text {
+    font-size: 20px;
+}
+
+.figure_box_text span {
+    display: block;
+    font-size: 16px;
+    margin-top: -1px;
+}
+
+.figure_box_text .min_price {
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.flower_text {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.flower_title {
+    margin-bottom: 20px;
+}
+
+.flower_title h5 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.flower_title span {
+    font-size: 18px;
+}
+
+.price_wrap {
+    font-family: sans-serif;
+}
+
+.flower_wrap_sp::-webkit-scrollbar {
+    /* スクロールバーの高さ */
+    height: 4px;
+}
+
+@media screen and (max-width:660px) {
+    .flower_text {
+        font-size: 14px;
+    }
+}
+
+/*===min-width:665px===*/
+
+@media screen and (min-width:960px) {
+    .flower_title {
+        margin-bottom: 40px;
+    }
+
+    .flower_box_img_cover {
+        margin-bottom: 4px;
+    }
+
+    .figure_box_text {
+        margin-bottom: 16px;
+    }
+
+    .flower_wrap_pc {
+        gap: 45px;
+    }
+}
+
+/*===min-width:960px===*/
+
+/*=====================
+料金
+=====================*/
+.price_wrap {
+    margin-bottom: 40px;
+}
+
+.section_under_line {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+    background-color: #fda826;
+    margin-bottom: 40px;
+}
+
+.price_box {
+    margin-bottom: 16px;
+}
+
+.price_box span {
+    display: block;
+    font-size: 15px;
+}
+
+.price_box span:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.price_box span:first-of-type {
+    font-size: 16px;
+    width: 80px;
+    margin: 0 auto 8px;
+}
+
+.price_box span:first-of-type::after {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    border-bottom: 1px solid #282728;
+}
+
+.min_price::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #282728;
+    width: 140px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.min_price {
+    font-size: 14px;
+}
+
+@media screen and (min-width:960px) {
+    .price_wrap {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 80px;
+    }
+
+    .section_under_line {
+        margin-bottom: 80px;
+    }
+
+    .flower_pc {
+        margin-bottom: 80px;
+    }
+
+    .bouquet .flower_pc {
+        margin-bottom: 40px;
+    }
+
+    .savon img {
+        max-width: 216px;
+    }
+
+    .savon_pc {
+        justify-content: center;
+        gap: 45px;
+    }
+}
+
+/*===min-width:960px===*/

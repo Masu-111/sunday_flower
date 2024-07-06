@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/*
+SP 〜519px
+tab 520px 〜 959px
+PC 960px 〜 
+*/
+
+/*
+z-index
+9999 ロゴフェードインp
+999 ロゴフェードイン
+100 ハンバーガーメニューボタン　header .hum_menu
+50  ヘッダーナビリスト header .nav_list
+-50 キービジュアル　.key_v
+*/
+
+/*=====================
+地図 テキスト
+=====================*/
+.access_img {
+    background-image: url(../../img/access_key.jpg);
+}
+
+.access_map {
+    position: relative;
+    width: 150%;
+    height: auto;
+    right: 25%;
+    margin-bottom: 32px;
+}
+
+.access_map img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.access_text {
+    font-family: sans-serif;
+}
+
+.access_text span {
+    display: block;
+    text-align: start;
+}
+
+.access_text span:first-of-type {
+    margin-bottom: 8px;
+    /* border-bottom: 1px solid #282728; */
+}
+
+.access_text span:last-of-type {
+    margin-left: 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.access_info_title {
+    display: block;
+    text-align: start;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.access_info_wrap {
+    margin-left: 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    text-align: start;
+}
+
+.access_info_box {
+    margin-bottom: 16px;
+}
+
+.access_info_box::before {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #fda826;
+    margin-right: 8px;
+}
+
+.access_info_box p {
+    margin-top: 4px;
+    margin-left: 30px;
+}
+
+
+@media screen and (min-width:960px) {
+    .access_text span:last-of-type {
+        margin-left: 50px;
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+
+    .access_map {
+        width: 100%;
+        position: static;
+    }
+}
+
+/*===min-width:960px===*/

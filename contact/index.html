@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="icon" href="../img/favicon.ico" />
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" sizes="180x180" />
+  <link rel="stylesheet" href="../css/common/reset.css" />
+  <link rel="stylesheet" href="../css/common/style.css" />
+  <link rel="stylesheet" href="../css/common/under.css" />
+  <link rel="stylesheet" href="../css/page/contact.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="header_logo">
+        <div class="header_logo_inner">
+          <a class="header_logo_cover" href="../index.html">
+            <img src="../img/sf_logo3.svg" alt="sunday flowerのロゴマーク" />
+          </a>
+        </div>
+      </h1>
+      <div class="hum_menu">
+        <div class="hum_lines">
+          <span class="hum_line1"></span>
+          <span class="hum_line2"></span>
+          <span class="hum_line3"></span>
+        </div>
+        <div class="hum_text">menu</div>
+      </div>
+      <nav class="nav_list">
+        <ul class="nav_list_inner">
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../flower/index.html">Flower</a></li>
+          <li><a href="../access/index.html">Access</a></li>
+          <li><a href="./index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="under_img_box" id="about">
+    <div class="under_img_cover contact_img"></div>
+    <span class="scroll_down"></span>
+    <span class="scroll_text">SCROOL</span>
+  </div>
+
+  <main>
+    <section class="under">
+      <div class="under_inner">
+        <div class="section_title">
+          <h3>Contact</h3>
+          <span class="section_title_line"></span>
+          <h4>お問い合わせ</h4>
+        </div>
+        <div class="contact_form_text">
+          お花に関するご質問・ご相談など、お問い合わせフォームにて受け付けております。<br />
+          必要事項をご記入の上、「入力内容の確認へ」を押してください。
+        </div>
+
+        <form class="contact_form h-adr" action="check.php" method="post">
+          <div class="contact_form_inner">
+            <dl class="form_item">
+              <dt><label for="userName">お名前/会社名</label><span class="hissu">必須</span></dt>
+              <dd><input type="text" name="userName" id="userName" /></dd>
+            </dl>
+            <dl class="form_item">
+              <dt><label for="userKana">ふりがな</label><span class="hissu">必須</span></dt>
+              <dd><input type="text" name="userKana" id="userKana" /></dd>
+            </dl>
+            <dl class="form_item">
+              <span class="p-country-name" style="display: none">Japan</span>
+              <dt><label for="jyu_sho">ご住所</label></dt>
+              <dd class="zipcode_cover">
+                〒<input class="p-postal-code" type="text" name="jyu_sho" id="jyu_sho" maxlength="8" />
+              </dd>
+              <dd class="pref_choice">
+                <select class="p-region" name="pref" id="pref">
+                  <option value="" selected hidden>選択してください</option>
+                </select>
+              </dd>
+              <dd>
+                <input class="p-locality p-street-address p-extended-address" type="text" name="address"
+                  placeholder="例）新宿区愛住町22 第3山田ビル1F" />
+              </dd>
+            </dl>
+            <dl class="form_item">
+              <dt><label for="userEmail">メールアドレス</label><span class="hissu">必須</span></dt>
+              <dd><input type="email" name="userEmail" id="userEmail" /></dd>
+            </dl>
+            <dl class="form_item">
+              <dt><label for="userTel">電話番号</label></dt>
+              <dd><input type="tel" name="userTel" id="userTel" /></dd>
+            </dl>
+            <dl class="form_item">
+              <dt><label for="naiyou">お問い合わせ内容</label><span class="hissu">必須</span></dt>
+              <dd>
+                <textarea name="naiyou" rows="4" cols="40" id="naiyou"></textarea>
+              </dd>
+            </dl>
+          </div>
+          <div class="submit_btn_cover">
+            <input class="submit_btn" type="submit" value="入力内容の確認へ" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer_inner">
+      <div class="footer_logo">
+        <a href="../index.html"><img src="../img/sf_logo3_white.svg" alt="" /></a>
+      </div>
+      <address>
+        〒160-0005<br />
+        東京都新宿区愛住町22 第三山田ビル1F<br />
+        TEL:03-1234-5678<br />
+        営業時間:10:00~20:00<br />
+        定休日:年中無休（年始を除く）<br />
+      </address>
+      <small>&copy;株式会社日本生花</small>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+
+</html>
